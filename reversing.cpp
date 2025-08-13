@@ -6,24 +6,27 @@
 #include <iostream>
 using namespace std;
 
-int main(){
-    int arr[8];
-    cout<<"Enter the Elements of the array: ";
-    for(int i=0;i<8;i++)
-    {
-        cin>>arr[i];
-    }
-    cout<<"The Array is: ";
-    for(int i=0;i<8;i++)
-    {
-        cout<<arr[i]<<" ";
-    }
-    int*arr1[8];
-    arr1[8]=&arr[8];
-    cout<<"The reversed array is: ";
-    for(int i=0;i<8;i++)
-    {
-        cout<<*(arr1[8]-i-1)<<" ";
-    }
+int main() {
+    int arr[5];
+    cout << "Enter the Elements of the array: ";
+    for(int i = 0; i < 5; i++)
+        cin >> arr[i];
 
+    cout << "The Array is: ";
+    for(int i = 0; i < 5; i++)
+        cout << arr[i] << " ";
+
+    int *p = arr + 5;
+    cout << "\nThe reversed array is: ";
+    for(int i = 0; i < 5; i++)
+        cout << p[-i-1] << " ";
 }
+
+/* Enter the Elements of the array: 435
+34
+76
+4554
+34
+The Array is: 435 34 76 4554 34 
+The reversed array is: 34 4554 76 34 435 */
+
